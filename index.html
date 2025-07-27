@@ -5,30 +5,42 @@
   <title>Tea, Clouds & Turbulence</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Body background */
     body {
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;  /* Makes background stay in place when scrolling */
-      color: #fff;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px 20px;
-      margin: 0;
-      min-height: 100vh;
+      color: #fff;
       overflow: hidden;
+      min-height: 100vh;
+      position: relative;
     }
 
-    /* Navigation */
+    /* Background with dark overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+
     nav {
-      background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+      background: rgba(0, 0, 0, 0.6);
       padding: 15px 0;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
-      text-align: center;
     }
 
     nav a {
@@ -44,19 +56,25 @@
       color: #f9f6f0;
     }
 
-    /* Padding for content to avoid overlap with fixed navbar */
     body > *:not(nav) {
       padding-top: 70px;
     }
 
-    /* Header text */
+    .content-wrapper {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px 20px;
+      margin: 40px auto;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
     h1 {
       font-size: 3.5em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
-    /* Paragraph text */
     p {
       font-size: 1.3em;
       max-width: 600px;
@@ -64,7 +82,6 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
 
-    /* Image styling */
     img {
       max-width: 100%;
       height: auto;
@@ -82,10 +99,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>Tea, Clouds & Turbulence</h1>
-  <p>Your go-to blog for everything flying, with a cup of tea and a splash of humor.</p>
-  <p>Ready to sip, soar, and laugh? Stick around!</p>
-  
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80" alt="Clouds with tea cup" />
+  <div class="content-wrapper">
+    <h1>Tea, Clouds & Turbulence</h1>
+    <p>Your go-to blog for everything flying, with a cup of tea and a splash of humor.</p>
+    <p>Ready to sip, soar, and laugh? Stick around!</p>
+    <img src="https://images.unsplash.com/photo-1514454529242-9e4677563e0c?auto=format&fit=crop&w=1350&q=80" alt="Tea cup in clouds" />
+  </div>
 </body>
 </html>
