@@ -11,12 +11,11 @@
       font-family: Arial, sans-serif;
       text-align: center;
       color: #fff;
-      overflow: hidden;
       min-height: 100vh;
       position: relative;
     }
 
-    /* Background with dark overlay */
+    /* Background with dark overlay and airplane image */
     body::before {
       content: "";
       position: fixed;
@@ -25,9 +24,9 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-      ), url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?auto=format&fit=crop&w=1350&q=80');
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ), url('https://stockcake.com/i/airplane-flying-over-clouds-72625/large');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -70,40 +69,3 @@
     }
 
     h1 {
-      font-size: 3.5em;
-      margin-bottom: 0.3em;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    }
-
-    p {
-      font-size: 1.3em;
-      max-width: 600px;
-      margin: 0 auto 1em auto;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="content-wrapper">
-    <h1>Tea, Clouds & Turbulence</h1>
-    <p>Your go-to blog for everything flying, with a cup of tea and a splash of humor.</p>
-    <p>Ready to sip, soar, and laugh? Stick around!</p>
-    <img src="https://images.unsplash.com/photo-1514454529242-9e4677563e0c?auto=format&fit=crop&w=1350&q=80" alt="Tea cup in clouds" />
-  </div>
-</body>
-</html>
