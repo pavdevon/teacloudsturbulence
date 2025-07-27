@@ -4,25 +4,122 @@
   <meta charset="UTF-8" />
   <title>Contact - Tea, Clouds & Turbulence</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Same styles as index.html */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 0;
+      position: fixed;
+      top: 0; width: 100%;
+      z-index: 1000;
+    }
+    nav a {
+      color: #a9d6e5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #f9f6f0;
+    }
+    body > *:not(nav) {
+      padding-top: 70px;
+    }
+    .content-wrapper {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px 20px;
+      margin: 40px auto;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    form {
+      text-align: left;
+      color: #ddd;
+      font-size: 1.1em;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      background-color: #a9d6e5;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #000;
+      transition: background-color 0.3s ease-in-out;
+    }
+    button:hover {
+      background-color: #f9f6f0;
+    }
+  </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a> |
     <a href="about.html">About</a> |
+    <a href="blog.html">Blog</a> |
     <a href="contact.html">Contact</a>
   </nav>
-  <hr />
-  <h1>Contact Me</h1>
-  <p>If you'd like to get in touch, drop me a message!</p>
-  <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br/>
-    <input type="text" id="name" name="name" required /><br/><br/>
-    <label for="email">Email:</label><br/>
-    <input type="email" id="email" name="email" required /><br/><br/>
-    <label for="message">Message:</label><br/>
-    <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
-    <input type="submit" value="Send" />
-  </form>
-  <p><small>*Note: This form uses mailto, so it will open your email client.</small></p>
+
+  <div class="content-wrapper">
+    <h1>Contact Us</h1>
+    <form action="#" method="post" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </body>
 </html>
