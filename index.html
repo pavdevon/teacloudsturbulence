@@ -15,24 +15,23 @@
       position: relative;
     }
 
-    /* Background with dark overlay and airplane image */
-   body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)
-  ), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-}
-
+    /* Neutral blue sky background with overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
 
     nav {
       background: rgba(0, 0, 0, 0.6);
@@ -103,7 +102,7 @@
     <h1>Tea, Clouds & Turbulence</h1>
     <p>Your go‑to blog for everything flying, with a cup of tea and a splash of humor.</p>
     <p>Ready to sip, soar, and laugh? Stick around!</p>
-    <img src="https://stockcake.com/i/airplane-flying-over-clouds-72625/large" alt="Single-engine airplane flying over clouds" />
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80" alt="Blue sky with clouds" />
   </div>
 </body>
 </html>
