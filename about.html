@@ -4,16 +4,82 @@
   <meta charset="UTF-8" />
   <title>About - Tea, Clouds & Turbulence</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Same styles as index.html for consistency */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 0;
+      position: fixed;
+      top: 0; width: 100%;
+      z-index: 1000;
+    }
+    nav a {
+      color: #a9d6e5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #f9f6f0;
+    }
+    body > *:not(nav) {
+      padding-top: 70px;
+    }
+    .content-wrapper {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px 20px;
+      margin: 40px auto;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 1em auto;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a> |
     <a href="about.html">About</a> |
+    <a href="blog.html">Blog</a> |
     <a href="contact.html">Contact</a>
   </nav>
-  <hr />
-  <h1>About Tea, Clouds & Turbulence</h1>
-  <p>This blog is run by a private pilot with a passion for flying, tea, and the occasional bump in the air.</p>
-  <p>Join me as I share flying tales, tips, and the odd turbulence story—all while enjoying a cuppa.</p>
+
+  <div class="content-wrapper">
+    <h1>About Tea, Clouds & Turbulence</h1>
+    <p>Welcome to Tea, Clouds & Turbulence — your friendly aviation blog!</p>
+    <p>We share stories, tips, and humor from the skies. Whether you're a pilot, aviation enthusiast, or just here for the tea, you're in the right place.</p>
+  </div>
 </body>
 </html>
